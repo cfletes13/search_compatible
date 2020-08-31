@@ -10,7 +10,7 @@
     'description': """
                 Product Global Search
         """,
-    'depends': ['base', 'product', 'sale', 'website_sale', 'website_mail', 'sale_management', 'marvelfields'],
+    'depends': ['base', 'product', 'sale', 'website_sale', 'website_mail', 'sale_management'],
     'data': [
 
     ],
