@@ -38,3 +38,8 @@ class WebsiteSale(WebsiteSale):
                 domain += [('attribute_line_ids.value_ids', 'in', ids)]
 
         return domain
+
+    def _get_search_order(self, post):
+        # OrderBy will be parsed in orm and so no direct sql injection
+        # id is added to be sure that order is a unique sort key
+        return 'is_published desc,%s , x_studio_tipo asc' % post.get('order', 'website_sequence desc')
